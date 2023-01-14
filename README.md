@@ -1,6 +1,6 @@
 # SEP CA2 Assignment
 ### Setup
-1. open up your terminal and run the following:
+1. Open up your terminal and run the following:
 ```
 git clone https://github.com/ChuaShengYou/SEP-CA2.git
 ```
