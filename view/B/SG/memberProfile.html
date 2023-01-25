@@ -29,15 +29,20 @@
             var member = null;
             document.addEventListener('DOMContentLoaded', function(){
                 member = JSON.parse(sessionStorage.getItem("member"));
-                
+                if (sessionStorage.getItem('memberName') != "null") {
+                    document.getElementById('name').value = sessionStorage.getItem('memberName');
+                }
+
                 document.getElementById('email').value = sessionStorage.getItem('memberEmail');
-                document.getElementById('name').value = sessionStorage.getItem('memberName');
+                //document.getElementById('name').value = sessionStorage.getItem('memberName');
                 document.getElementById('phone').value = member.phone;
                 document.getElementById('address').value = member.address;
                 document.getElementById('securityAnswer').value = member.securityAnswer;
                 document.getElementById('age').value = member.age;
                 document.getElementById('income').value = member.income;
                 document.getElementById('country').value = member.city;
+
+
                 if(member.sla == 1) {
                     document.getElementById("serviceLevelAgreement").checked = true;
                 }
@@ -200,6 +205,9 @@
                 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 return startDate.toLocaleDateString("en-US", options);
             }
+
+
+
 
             async function submitForm() {
                 var oldPassword = document.getElementById('oldPassword').value;
