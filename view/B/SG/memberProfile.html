@@ -29,7 +29,15 @@
             var member = null;
             document.addEventListener('DOMContentLoaded', function(){
                 member = JSON.parse(sessionStorage.getItem("member"));
-
+                
+                document.getElementById('memberEmail').value = sessionStorage.getItem('memberEmail');
+                document.getElementById('memberName1').value = sessionStorage.getItem('memberName');
+                document.getElementById('phone').value = member.phone;
+                document.getElementById('address').value = member.address;
+                document.getElementById('securityAnswer').value = member.securityAnswer;
+                document.getElementById('age').value = member.age;
+                document.getElementById('income').value = member.income;
+                document.getElementById('country').value = member.city;
                 if(member.sla == 1) {
                     document.getElementById("serviceLevelAgreement").checked = true;
                 }
@@ -319,11 +327,11 @@
                                         <h4>Personal Information</h4>
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input class="form-control" required="true" id="name" type="text" />
+                                            <input class="form-control" required="true" id="memberName1" type="text"/>
                                         </div>
                                         <div class="form-group">
                                             <label>E-mail Address</label>
-                                            <input class="form-control" required="true" id="email" disabled />
+                                            <input class="form-control" required="true" id="memberEmail" disabled />
                                         </div>
                                         <div class="form-group">
                                             <label>Phone</label>
