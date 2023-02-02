@@ -335,7 +335,7 @@
                                         <h4>Personal Information</h4>
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input class="form-control" required="true" id="name" type="text"/>
+                                            <input class="form-control" required="true" id="name" type="text" pattern="[a-zA-Z ]*"/>
                                         </div>
                                         <div class="form-group">
                                             <label>E-mail Address</label>
@@ -343,7 +343,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Phone</label>
-                                            <input class="form-control" required="true" pattern="[0-9]*" title="Numbers only" type="text" id="phone" required pattern="/^\d{9,15}$/" />
+                                            <input class="form-control" required="true" pattern="[0-9]*" title="Numbers only" type="text" id="phone" />
                                         </div>
                                         <div class="form-group">
                                             <label>Country</label>
@@ -600,7 +600,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input class="form-control" type="text" required="true" id="address" />
+                                            <input class="form-control" type="text" required="true" id="address" pattern="[a-zA-Z ]*"/>
                                         </div>
                                         <div class="form-group">
                                             <label>Set Challenge Question</label>
@@ -609,7 +609,7 @@
                                                 <option value="2">What is your first pet's name?</option>
                                                 <option value="3">What is your favourite animal?</option>
                                             </select>
-                                            <input class="form-control" type="text" required="true" id="securityAnswer" />
+                                            <input class="form-control" type="text" required="true" id="securityAnswer"/>
                                         </div>
                                         <div class="form-group">
                                             <label>Age</label>
